@@ -6,11 +6,12 @@ import autopy
 
 def random_move():
     width, height = autopy.screen.size()
-    w = int(width)
-    h = int(height)
+    # We minus 2 to avoid locking hot corners
+    w = int(width) - 2
+    h = int(height) - 2
 
-    x = random.randint(0, w)
-    y = random.randint(0, h)
+    x = random.randint(2, w)
+    y = random.randint(2, h)
     autopy.mouse.move(x, y)
 
 
